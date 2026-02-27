@@ -7,12 +7,50 @@ console.log("Transitions JS V5: Loading...");
 
 let isTransitioning = false;
 
+const HERO_MAP = {
+    'index.html': 'img/image-jack-main-1.png',
+    'apropos.html': 'img/image-assis-vitre-1.png',
+    'montage.html': 'img/image-clope-main-1.png',
+    '3d.html': 'img/image-sombre-tete-1.png',
+    'photos.html': 'img/image-clope-main-1.png',
+    'design.html': 'img/image-cube-orange-1.png',
+    'contact.html': 'img/image-uzi-cul-1.png',
+    'formats-longs.html': 'img/image-clope-main-1.png',
+    'formats-courts-gaming.html': 'img/image-sombre-tete-1.png',
+    'formats-courts-ugc.html': 'img/image-sombre-tete-1.png',
+    'formats-courts-entreprenariat.html': 'img/image-sombre-tete-1.png'
+};
+
+const preloadedAssets = new Set();
+
 function init() {
     console.log("Initializing Transitions & Modal...");
     injectMotionBlurFilter();
-    injectModalStructure(); // Ensure modal exists on all pages
+    injectModalStructure();
     initPage();
     setupDelegatedListeners();
+    setupHoverPreload();
+}
+
+function setupHoverPreload() {
+    document.addEventListener('mouseover', e => {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        if (!href || href.includes('://') || href.startsWith('#')) return;
+
+        // Strip queries/hashes for mapping
+        const page = href.split(/[?#]/)[0];
+        const imgPath = HERO_MAP[page];
+
+        if (imgPath && !preloadedAssets.has(imgPath)) {
+            console.log("Preloading hero for:", page, imgPath);
+            const img = new Image();
+            img.src = imgPath;
+            preloadedAssets.add(imgPath);
+        }
+    });
 }
 
 if (document.readyState === 'loading') {
