@@ -8,17 +8,17 @@ console.log("Transitions JS V5: Loading...");
 let isTransitioning = false;
 
 const HERO_MAP = {
-    'index.html': 'img/image-jack-main-1.png',
-    'apropos.html': 'img/image-assis-vitre-1.png',
-    'montage.html': 'img/image-clope-main-1.png',
-    '3d.html': 'img/image-sombre-tete-1.png',
-    'photos.html': 'img/image-clope-main-1.png',
-    'design.html': 'img/image-cube-orange-1.png',
-    'contact.html': 'img/image-uzi-cul-1.png',
-    'formats-longs.html': 'img/image-clope-main-1.png',
-    'formats-courts-gaming.html': 'img/image-sombre-tete-1.png',
-    'formats-courts-ugc.html': 'img/image-sombre-tete-1.png',
-    'formats-courts-entreprenariat.html': 'img/image-sombre-tete-1.png'
+    'index.html': '/img/image-jack-main-1.png',
+    'apropos.html': '/img/image-assis-vitre-1.png',
+    'montage.html': '/img/image-clope-main-1.png',
+    '3d.html': '/img/image-sombre-tete-1.png',
+    'photos.html': '/img/image-clope-main-1.png',
+    'design.html': '/img/image-cube-orange-1.png',
+    'contact.html': '/img/image-uzi-cul-1.png',
+    'formats-longs.html': '/img/image-clope-main-1.png',
+    'formats-courts-gaming.html': '/img/image-sombre-tete-1.png',
+    'formats-courts-ugc.html': '/img/image-sombre-tete-1.png',
+    'formats-courts-entreprenariat.html': '/img/image-sombre-tete-1.png'
 };
 
 const preloadedAssets = new Set();
@@ -208,7 +208,11 @@ function handleMediaClick(item) {
         modalLeft.appendChild(video);
     } else if (imgElement) {
         const img = document.createElement('img');
-        img.src = imgElement.src;
+        img.src = imgElement.getAttribute('src'); // Use getAttribute to get original (might be relative or absolute)
+        // Ensure it starts with / if it was relative
+        if (img.src.indexOf('http') !== 0 && img.src.indexOf('/') !== 0) {
+            img.src = '/' + img.src;
+        }
         img.style.maxWidth = '100%';
         img.style.maxHeight = '100%';
         img.style.objectFit = 'contain';
