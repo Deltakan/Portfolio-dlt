@@ -1,3 +1,695 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Portfolio - dlt</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap"
-        rel="stylesheet"><link rel="stylesheet" href="/style.css"></head><body><div class="container"><div class="sidebar"><header><h1>Portfolio - dlt</h1><nav><ul class="menu"><li><a href="apropos.html">A Propos.</a></li><li><a href="montage.html">Montage Vidéo.</a></li><li><a href="design.html">Design (logo, visuels ect).</a></li><li><a href="3d.html">Réalisations 3d.</a></li><li><a href="photos.html">Photos.</a></li><li><a href="CV_Nicolas_Bonnet.pdf" download>CV.</a></li><li><a href="contact.html">Contacts.</a></li></ul></nav></header><footer class="footer"><p>&copy; 2024 [Ton Nom/Pseudo]. Tous droits réservés.</p><p>Au centre (Navigation rapide) : Accueil | Projets | Contact</p><p>À droite (Juridique) : Mentions Légales | Politique de Confidentialité</p></footer></div><div class="hero-image-container"><img fetchpriority="high" src="/img/image-jack-main-1.png" alt="Robot holding whiskey bottle"
-                class="hero-image"></div><div class="gradient-overlay"></div></div><script defer src="/smooth-scroll.js"></script><script defer src="/transitions.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Minimalist Liquid Glass</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Overlay for blur and dark effect -->
+    <div id="overlay"></div>
+
+    <!-- Sidebar with Glassmorphism -->
+    <nav id="sidebar" class="glass-sidebar auto-collapse">
+        <!-- Header / Toggle -->
+        <div class="sidebar-header">
+            <button id="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="hamburger-icon">
+                    <path class="line line-1" d="M4 6H20" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path class="line line-2" d="M4 12H20" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path class="line line-3" d="M4 18H20" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="sidebar-content">
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-target="accueil"><span class="nav-text">Accueil</span></a>
+                </li>
+                <li><a href="#" class="nav-link" data-target="a-propos"><span class="nav-text">À propos</span></a></li>
+                <li><a href="#" class="nav-link" data-target="design"><span class="nav-text">Design / Réalisation
+                            3D</span></a></li>
+                <li><a href="#" class="nav-link" data-target="photos"><span class="nav-text">Photos</span></a></li>
+                <li><a href="CV.pdf" download class="nav-link"><span class="nav-text">CV</span></a></li>
+                <li><a href="#" class="nav-link" data-target="contacts"><span class="nav-text">Contacts</span></a></li>
+
+                <!-- Submenu: Montage vidéo -->
+                <li class="has-submenu">
+                    <a href="#" class="submenu-toggle">
+                        <span class="nav-text">Montage vidéo</span>
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#" class="nav-link" data-target="montage-longs"><span class="nav-text">Formats
+                                    longs</span></a></li>
+                        <li><a href="#" class="nav-link" data-target="montage-ugc"><span class="nav-text">Formats courts
+                                    UGC</span></a></li>
+                        <li><a href="#" class="nav-link" data-target="montage-gaming"><span class="nav-text">Formats
+                                    courts gaming</span></a></li>
+                        <li><a href="#" class="nav-link" data-target="montage-entreprenariat"><span
+                                    class="nav-text">Formats courts entreprenariat</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section id="accueil" class="page-section active"
+            style="background-image: url('img/Fonds%20Site/Acceuil.png');background-position: 30%;background-size: 150%;">
+            <div class="glass-panel">
+                <h1>DLT Portfolio</h1>
+                <p>Montage/Design/3D/Photos/Sons<br>J'aime explorer les univers visuels et sonores.</p>
+            </div>
+        </section>
+
+        <section id="a-propos" class="page-section" style="background-image: url('img/Fonds%20Site/A%20propos.png');">
+            <div class="glass-panel about-panel">
+                <h2>À propos de moi</h2>
+                <p>Je m'appelle Nicolas Bonnet, j'ai obtenu mon baccalauréat en 2022, puis j'ai commencé une licence de
+                    droit à l'Université Champollion d'Albi. Très vite, je me suis rendu compte que ce n'était pas un
+                    domaine fait pour moi. J'ai donc préféré travailler et me former par moi-même au montage vidéo,
+                    domaine qui m'attirait depuis longtemps.</p>
+                <p>En janvier suivant, plusieurs BUT MMI ouvraient une rentrée décalée : c'était ma voie évidente.
+                    Malheureusement, je n'ai pas été accepté à ce moment-là. J'ai donc choisi de continuer à travailler,
+                    à la fois dans ma micro-entreprise de montage vidéo que je venais de créer, et comme employé à
+                    Leclerc, pour financer mes projets.</p>
+                <p>L'année suivante, j'ai repostulé en BUT MMI via Parcoursup, déterminé à y entrer. J'ai finalement été
+                    accepté le jour même de la rentrée. Entre-temps, j'avais déjà intégré un BTS CIEL à Mirepoix — une
+                    solution de repli — mais cette expérience a surtout confirmé ce que je savais déjà : je voulais
+                    absolument rejoindre le BUT MMI.</p>
+                <p>À la fin de cette année, j'ai poursuivi mon activité de monteur vidéo tout l'été. J'ai travaillé
+                    énormément — parfois 10 h/jour, 7 j/7, pendant plus d'un mois et demi — pour environ 600 €, sans
+                    compter les charges URSSAF ou les logiciels. Pas un succès financier, mais une expérience très
+                    formatrice : j'ai mesuré mes limites, affiné mon style et renforcé ma passion.</p>
+                <p>Aujourd'hui, je suis enfin étudiant en BUT MMI, et je continue la 3D, la photo, la vidéo et le
+                    graphisme. J'ai déjà réalisé des chartes graphiques et des logos pour l'entreprise de ma mère et
+                    celle de mon cousin, en parallèle de mes projets persos.</p>
+                <p>Ce portfolio montre une partie de mon travail.</p>
+            </div>
+        </section>
+
+        <section id="design" class="page-section" style="background-image: url('img/Fonds%20Site/Designs.png');">
+            <div class="glass-panel no-bg">
+                <h2>Design / Réalisation 3D</h2>
+                <div class="media-grid">
+                    <div class="img-wrapper">
+                        <img src="img/design/mise-en-scene-5-v2.png" alt="mise-en-scene-5-v2.png" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/design/gamme--jantes-&-pneus-catalogue-1.png"
+                            alt="gamme--jantes-&-pneus-catalogue-1.png" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/design/gamme--parfum-catalogue-1.png" alt="gamme--parfum-catalogue-1.png"
+                            loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/design/2nd-test-voiture.png" alt="2nd-test-voiture.png" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/design/rendu-1l-decontaminant-ferreux.png"
+                            alt="rendu-1l-decontaminant-ferreux.png" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/design/gamme-degoudronnant-catalogue-1.png"
+                            alt="gamme-degoudronnant-catalogue-1.png" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/design/logo-design.png" alt="logo-design.png" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/design/rendu-5l-nettoyant-anti-buee-png.png"
+                            alt="rendu-5l-nettoyant-anti-buee-png.png" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/design/rendu-1l-mousse-active-parfumee2.png"
+                            alt="rendu-1l-mousse-active-parfumee2.png" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="photos" class="page-section section-gray">
+            <div class="glass-panel no-bg">
+                <h2>Photos</h2>
+                <div class="media-grid">
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1060730-2.jpg" alt="p1060730-2.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1060729-3.jpg" alt="p1060729-3.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1060745.jpg" alt="p1060745.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080868.jpg" alt="p1080868.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080854.jpg" alt="p1080854.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070027.jpg" alt="p1070027.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070347.jpg" alt="p1070347.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1040723.jpg" alt="p1040723.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070192.jpg" alt="p1070192.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1050849.jpg" alt="p1050849.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080881.jpg" alt="p1080881.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080880.jpg" alt="p1080880.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080310.jpg" alt="p1080310.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080304.jpg" alt="p1080304.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/sam_3896.jpg" alt="sam_3896.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070627.jpg" alt="p1070627.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1060556.jpg" alt="p1060556.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1090100.jpg" alt="p1090100.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070585.jpg" alt="p1070585.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080448.jpg" alt="p1080448.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1090075.jpg" alt="p1090075.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1050785.jpg" alt="p1050785.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1090211.jpg" alt="p1090211.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1050792.jpg" alt="p1050792.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080362.jpg" alt="p1080362.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080835.jpg" alt="p1080835.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070251.jpg" alt="p1070251.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1090206.jpg" alt="p1090206.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1060654.jpg" alt="p1060654.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1040802.jpg" alt="p1040802.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080603.jpg" alt="p1080603.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1040803.jpg" alt="p1040803.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/sam_3770.jpg" alt="sam_3770.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1090201.jpg" alt="p1090201.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/sam_3612.jpg" alt="sam_3612.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070256.jpg" alt="p1070256.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/sam_3565.jpg" alt="sam_3565.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070312.jpg" alt="p1070312.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1050834.jpg" alt="p1050834.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1050835.jpg" alt="p1050835.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070307.jpg" alt="p1070307.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070067.jpg" alt="p1070067.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1040614.jpg" alt="p1040614.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1040771.jpg" alt="p1040771.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1060462.jpg" alt="p1060462.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080027.jpg" alt="p1080027.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1090208.jpg" alt="p1090208.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1050819.jpg" alt="p1050819.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080733.jpg" alt="p1080733.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1080727.jpg" alt="p1080727.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070173.jpg" alt="p1070173.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1060566.jpg" alt="p1060566.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070088-2.jpg" alt="p1070088-2.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1040717.jpg" alt="p1040717.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1060461-2.jpg" alt="p1060461-2.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1070765.jpg" alt="p1070765.jpg" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="img/photos/p1040711.jpg" alt="p1040711.jpg" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv" class="page-section">
+            <div class="glass-panel">
+                <h2>Mon CV</h2>
+                <p>Retrouvez mon parcours professionnel ici.</p>
+            </div>
+        </section>
+
+        <section id="contacts" class="page-section" style="background-image: url('img/Fonds%20Site/Contact.png');">
+            <div class="glass-panel contact-panel">
+                <h2>Contacts</h2>
+                <p>Me contacter pour toute collaboration.</p>
+                <ul class="contact-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <a href="tel:+33761797951">07 61 79 79 51</a>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <a href="mailto:bonnetn58@gmail.com">bonnetn58@gmail.com</a>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                        <a href="https://instagram.com/nico.dllt" target="_blank" rel="noopener">@nico.dllt</a>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                        </svg>
+                        <span>deltakan <em>(bientôt disponible)</em></span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        <a href="https://www.linkedin.com/in/nicolas-bonnet" target="_blank" rel="noopener">Nicolas
+                            Bonnet</a>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>24 rue de la Tolosanne, 81100 Castres</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="montage-longs" class="page-section section-gray">
+            <div class="glass-panel no-bg">
+                <h2>Formats longs</h2>
+                <div class="media-grid video-grid video-grid-long">
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/0fqP4pPT29k" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/ZWGG8fV6QYM" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/A_a0Oz77VNg" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/xitzihc5j7k" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/il6BFZVzWkM" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/whkmmwEik2Y" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/_rE0XTj67xo" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/tkVoYpUJ1is" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/_8K6G7NhW2o" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/gjFCjY6LFZE" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper video-wrapper-long"><iframe
+                            src="https://www.youtube.com/embed/9ikMdv3tFHQ" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="montage-ugc" class="page-section section-gray">
+            <div class="glass-panel no-bg">
+                <h2>Formats courts UGC</h2>
+                <div class="media-grid video-grid">
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/C_75CCHPAA0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/i6h4rP0ulSY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Dt6n7Fl38TU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/MiX5YfVT7F0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GYI_wtID3_s"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/sZIVb3n9avA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/54qANK1u2Mw"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/6R4UB_RqbQo"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/4_KfJ_qS7hE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/lDWT3J9Z9g8"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/iIE07uArsDw"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/jFuLY82N6sE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/fPosqMbbpzw"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/OFduDTaZ-OA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/PSu4YyD9G0A"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/qyifjVwRhgA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/DKFaQxsQVvk"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vdN0hlT1MT0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/JTw0KfCHeg0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/-GJaosH7qjs"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="montage-gaming" class="page-section section-gray">
+            <div class="glass-panel no-bg">
+                <h2>Formats courts gaming</h2>
+                <div class="media-grid video-grid">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ashPzle2C1s" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/yKi7o9uGNgs" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/s5jM4a1rFYs" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/G5-ioXWAHuM" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/o51ED-ZzlzI" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/6-utcOulqcI" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/TT8BOHs51xw" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/BUPhsEaPrms" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/h3fLd_qIH1I" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/8YeRWS9zYgU" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/8PWuBIVqRXs" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/z9O3CZI-WqU" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/DAnEedSqnUM" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/nf_jys0cfwo" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/3vRlmsbZumw" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/sSCSEIPK0jQ" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/eR9Q4JTr2hU" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="montage-entreprenariat" class="page-section section-gray">
+            <div class="glass-panel no-bg">
+                <h2>Formats courts entreprenariat</h2>
+                <div class="media-grid video-grid">
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/nN3GtMkW4rg"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/MUKA73nFokY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/VpwQ-4_VS6E"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/m4Xme9YHrcQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/lqifxY13Y-I"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/MS9JDZTyp5o"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/WhNdwGkEbjY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/iAcnOM8vH-k"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <div id="lightbox-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
