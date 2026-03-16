@@ -600,21 +600,21 @@ h6 {
 
 /* Default Backgrounds (Desktop) */
 #accueil {
-    background-image: url('img/Fonds%20Site/Acceuil.png');
+    background-image: url('img/Fonds%20Site/Acceuil.webp');
     background-position: 30% center;
     background-size: cover;
 }
 
 #a-propos {
-    background-image: url('img/Fonds%20Site/A%20propos.png');
+    background-image: url('img/Fonds%20Site/A%20propos.webp');
 }
 
 #design {
-    background-image: url('img/Fonds%20Site/Designs.png');
+    background-image: url('img/Fonds%20Site/Designs.webp');
 }
 
 #contacts {
-    background-image: url('img/Fonds%20Site/Contact.png');
+    background-image: url('img/Fonds%20Site/Contact.webp');
 }
 
 /* Remove blurred backdrop behind text for these sections */
