@@ -55,7 +55,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Submenu Toggle Logic
+    // Hover logic for submenus on desktop (screen width > 1200px)
+    document.querySelectorAll('.has-submenu').forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            if (window.innerWidth > 1200) {
+                const toggle = item.querySelector('.submenu-toggle');
+                if (toggle && !item.classList.contains('open')) {
+                    toggleSubmenu(toggle);
+                }
+            }
+        });
+
+        item.addEventListener('mouseleave', () => {
+            if (window.innerWidth > 1200) {
+                const toggle = item.querySelector('.submenu-toggle');
+                if (toggle && item.classList.contains('open')) {
+                    toggleSubmenu(toggle);
+                }
+            }
+        });
+    });
+
+    // Submenu Toggle Logic (Click)
     submenuToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
