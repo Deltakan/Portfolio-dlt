@@ -42,6 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', toggleMenu);
     overlay.addEventListener('click', closeMenu);
 
+    // Hover logic for desktop (screen width > 1200px)
+    sidebar.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 1200) {
+            openMenu();
+        }
+    });
+
+    sidebar.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 1200) {
+            closeMenu();
+        }
+    });
+
     // Submenu Toggle Logic
     submenuToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
